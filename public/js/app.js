@@ -14010,7 +14010,6 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]);
 var routes = [{ path: '/users', component: __webpack_require__(42) }, { path: '/dashboard', component: __webpack_require__(45) }, { path: '/jobs', component: __webpack_require__(48) }, { path: '/company', component: __webpack_require__(51) }, { path: '/profile', component: __webpack_require__(54) }, { path: '/reports', component: __webpack_require__(57) }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({
-    mode: 'history',
     routes: routes // short for `routes: routes`
 });
 
@@ -50021,7 +50020,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getUsers: function getUsers() {
             var _this = this;
 
-            axios.get('users').then(function (_ref) {
+            axios.get('/users').then(function (_ref) {
                 var data = _ref.data;
                 return _this.users = data.data;
             }).catch(function () {

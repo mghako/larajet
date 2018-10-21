@@ -20,14 +20,15 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+
 Route::resource('users', 'UserController');
 
-
-Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?');
+// Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?');
 
 //Route::get('{path}',"HomeController@lost")->where( 'path', '([A-z\d-\/_.]+)?' );
 
-// Route::get('/{any}', 'UserController@index')->where('any', '.*');
+// Route::get('/{path?}', 'HomeController@index')->where('path', '.*');
 // Route::get('/{vue_capture?}', function () {
 //     return view('layouts.backend.master');
 // })->where('vue_capture', '[\/\w\.-]*');
+

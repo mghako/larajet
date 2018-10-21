@@ -28,7 +28,7 @@
         },
         methods : {
             getUsers() {
-                axios.get('users')
+                axios.get('/users')
                     .then(({ data }) => (this.users = data.data ))
                     .catch( ()=> {
                         console.log('no data')
