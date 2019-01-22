@@ -18,12 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/{vue_param1?}/{vue_param2?}', function () {
+//     return view('home');
+// });
+// Route::resource(['users' => 'UserController']);
 
-
-
-Route::resource('users', 'UserController');
-
-// Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?');
+Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?');
 
 //Route::get('{path}',"HomeController@lost")->where( 'path', '([A-z\d-\/_.]+)?' );
 
